@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackie Jeans Smart Fit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👖 Jackie Jeans Smart Fit</h1>
+
+    <p>
+        Welcome! Choose how you'd like to complete your Smart Fit onboarding.
+    </p>
+
+    <button id="manualBtn">
+        Manual Onboarding
+    </button>
+
+
+    <br><br>
+
+    <button id="voiceBtn">
+        AI Voice Onboarding
+    </button>
+    <button id="resetBtn">
+    Reset Profile
+    </button>
+
+</div>
+
+<script>
+
+document.getElementById("manualBtn").addEventListener("click",function(){
+
+    window.location.href="manual.html";
+
+});
+
+document.getElementById("voiceBtn").addEventListener("click",function(){
+
+    window.location.href="voice.html";
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Success</title>
+
+<style>
+
+body{
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:#f5f5f5;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:15px;
+
+box-shadow:0px 0px 20px rgba(0,0,0,.2);
+
+text-align:center;
+
+}
+
+h1{
+
+color:green;
+
+}
+
+button{
+
+padding:12px 30px;
+
+border:none;
+
+border-radius:8px;
+
+background:#2563eb;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head><script>
+const user = JSON.parse(localStorage.getItem("userData"));
+
+if (user) {
+    document.querySelector(".card").innerHTML += `
+        <hr>
+        <h3>Your Details</h3>
+        <p><strong>Name:</strong> ${user.name}</p>
+        <p><strong>Email:</strong> ${user.email}</p>
+        <p><strong>Phone:</strong> ${user.phone}</p>
+        <p><strong>Waist:</strong> ${user.waist}</p>
+        <p><strong>Fit:</strong> ${user.fit}</p>
+        <p><strong>Brands:</strong> ${user.brands}</p>
+        <p><strong>Brand Size:</strong> ${user.brandSize}</p>
+        <p><strong>Height:</strong> ${user.height}</p>
+        <p><strong>Weight:</strong> ${user.weight || "Not Provided"}</p>
+    `;
+}
+</script>
+
+<body>
+
+<div class="card">
+
+<h1>✅ Onboarding Completed</h1>
+
+<p>Thank you for completing your Smart Fit profile.</p>
+
+<p>Your information has been saved successfully.</p>
+
+<button onclick="window.location.href='index.html'">
+
+Go Home
+
+</button>
+
+</div>
+
+</body>
+</html>
